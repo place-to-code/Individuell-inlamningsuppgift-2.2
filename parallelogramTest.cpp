@@ -24,20 +24,18 @@ protected:
 
 TEST(ParollelogramFormulaTest, CalculateAreaAndPerimeter) {
   const float pi = 3.1415926535; 
-  float firstFloat = 2.0;
-  float secondFloat = 3.0;
-  float angleFloat = 45.0;
-  float area = 4.2426405;
+  float firstFloat = 7.0;
+  float secondFloat = 11.0;
+  float angleFloat = 60.0;
   float perimeter;
 
-  // float angleInRadians = angleFloat * (pi / 180);
-  // float area, perimeter;
+
   float angleInRadians = angleFloat * (pi / 180);
   float expected_area = firstFloat*secondFloat*sin(angleInRadians);
   float expected_perimeter = (firstFloat + secondFloat)*2;
   
-  ParallelogramFormula(firstFloat, secondFloat, angleFloat, &perimeter);
-  
+  float area = ParallelogramFormula(firstFloat, secondFloat, angleFloat, &perimeter);
+ 
   EXPECT_FLOAT_EQ(expected_area, area);
   EXPECT_FLOAT_EQ(expected_perimeter, perimeter);
 }
