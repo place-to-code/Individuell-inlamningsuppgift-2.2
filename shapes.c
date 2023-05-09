@@ -10,6 +10,14 @@
 //funtion for calculation (without input) to make tasting easeir. 
 //because function can return only one value, but I need to return both area and "perimeter"
 //and to to create separate function I use pointers (in this case)
+float RectangleFormula (float firstFloat, float secondFloat, float* perimeter)
+{
+
+    float area = firstFloat*secondFloat;
+    *perimeter = (firstFloat + secondFloat)*2;
+    return area;
+}
+
 float ParallelogramFormula (float firstFloat, float secondFloat, float angleFloat, float* perimeter)
 {
     const float pi = 3.1415926535;  
@@ -65,9 +73,9 @@ float Rectangle()
 
 
     float secondFloat = atof (second);
-
-    float area = firstFloat*secondFloat;
-    float perimeter = (firstFloat + secondFloat)*2;
+    float area;
+    float perimeter;
+    area = RectangleFormula (firstFloat, secondFloat, &perimeter);
     printf ("The area of the rectangle is %.2f: ", area );
     printf ("\nThe perimeter of the rectangle is %.2f: ", perimeter);
     printf ("\nPress any key to continue...\n");

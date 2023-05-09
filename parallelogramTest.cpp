@@ -39,3 +39,16 @@ TEST(ParollelogramFormulaTest, CalculateAreaAndPerimeter) {
   EXPECT_FLOAT_EQ(expected_area, area);
   EXPECT_FLOAT_EQ(expected_perimeter, perimeter);
 }
+
+TEST(RectangleFormulaTest, CalculateAreaAndPerimeterOfRectangle) {
+  
+  float firstFloat = 7.0;
+  float secondFloat = 11.0;
+  float expected_area = firstFloat*secondFloat;
+  float expected_perimeter = (firstFloat + secondFloat)*2;
+  float perimeter; 
+  float area = RectangleFormula(firstFloat, secondFloat, &perimeter);
+ 
+  EXPECT_FLOAT_EQ(expected_area, area);
+  EXPECT_FLOAT_EQ(expected_perimeter, perimeter);
+}
