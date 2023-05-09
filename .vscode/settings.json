@@ -1,0 +1,14 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "c:\\Users\\Y\\source\\Individuell inlamningsuppgift",
+            "binaryPath": "c:\\Users\\Y\\source\\Individuell inlamningsuppgift\\program.exe",
+            "binaryArgs": []
+        },
+        {
+            "cwd": "c:\\Users\\Y\\Desktop\\New folder (11)\\Individuell-inlamningsuppgift-2.0",
+            "binaryPath": "c:\\Users\\Y\\Desktop\\New folder (11)\\Individuell-inlamningsuppgift-2.0\\YL-debug.exe",
+            "binaryArgs": []
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+Human win 	18/04/2023 18:54:48	 ratio 100%
+Robot win 	18/04/2023 18:54:58	 ratio 50%
+Human win 	18/04/2023 18:55:49	 ratio 67%
+Robot win 	18/04/2023 18:56:02	 ratio 50%
+Human win 	18/04/2023 18:56:07	 ratio 60%
+Robot win 	18/04/2023 18:56:19	 ratio 50%
+Robot win 	18/04/2023 18:56:25	 ratio 43%
+Robot win 	18/04/2023 18:56:31	 ratio 38%
+Human win 	19/04/2023 16:08:35	 ratio 44%
+Human win 	19/04/2023 16:15:04	 ratio 50%
+Robot win 	19/04/2023 16:36:46	 ratio 45%
+Human win 	19/04/2023 16:41:41	 ratio 50%
+Human win 	19/04/2023 16:43:25	 ratio 54%
+Robot win 	19/04/2023 16:49:38	 ratio 50%
