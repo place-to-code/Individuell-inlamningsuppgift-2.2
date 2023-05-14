@@ -68,11 +68,7 @@ TEST(CircleFormulaTest, CalculateAreaAndCircumferenceOfCircle) {
 TEST(TriangleFormulaTest, CalculateAreaAndPerimeterOfTriangle) 
 {
 
-// Enter first side of triangel: 4
-// Enter second side of triangel: 5
-// Enter the angle in degrees: 66
-// The area of the triangel is 9.14: 
-// The perimeter of the triangel is 13.97:
+ 
 
   const float pi = 3.1415926535; 
   float firstFloat = 4;

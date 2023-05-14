@@ -2,5 +2,5 @@
 #define GAME_H
 
 void RockPaperScissors();
-
+int randomFormulaForGame();
 #endif 

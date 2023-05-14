@@ -7,6 +7,16 @@
 #include <time.h>  
 #include <math.h> 
 
+
+int randomFormulaForGame()
+{
+srand (time(NULL));    
+int random =  rand() %3 + 1;  
+return random;
+}
+
+
+
 float  CheckStatistics(float* win, float* total)
 {
     char line[250];
@@ -39,9 +49,6 @@ fclose(file);
 // printf ("You won %.0f times of %.0f games. Your ratio is %.0f\%\n", *win+1, *total+1, ratio);
 return *win, *total;
 }
-
-
-
 
 bool SaveInFile(iWin)
 {
@@ -88,33 +95,34 @@ void RockPaperScissors()
 printf ("Rock Paper Scissors!");
 printf ("\n");
 printf ("Let's play!\n");
-Sleep(80);                        
+Sleep(500);                        
 printf ("Rock...\n");
-Sleep(80);                          
+Sleep(500);                          
 printf ("Paper...\n");
-Sleep(80);                           
+Sleep(500);                           
 printf ("Stone...\n");
 Sleep(500);                           
 printf ("Shoot!\n");
-Sleep(100);  
+Sleep(1000);  
 printf ("\n");
-srand (time(NULL));                                
-int random =  rand() %3 + 1;  
-
+ 
+int random = randomFormulaForGame();
+  
 if (random ==1)
 {
-    printf ("Stone!\n");
+    printf ("I choose Stone!\n");
 }               
 if (random ==2)
 {
-    printf ("Scissors!\n");
+    printf ("I choose Scissors!\n");
 } 
 if (random ==3)
 {
-    printf ("Paper!\n");
-}       
-Sleep(200);  
+    printf ("I choose Paper!\n");
+} 
 
+Sleep(500);  
+printf ("\n");
 printf ("Hmmm...Did I win? Y/N\n");
 char answer[2];
 
@@ -129,6 +137,7 @@ while (1)
         printf("\n");
         printf("Hehe! Hail all robots!\n");
         SaveInFile(iWin);
+        while ((getchar()) != '\n');
         break;
     }
     else if (strchr(answer, 'N') != NULL || strchr(answer, 'n') != NULL)
@@ -137,7 +146,9 @@ while (1)
         printf("You are lucky, meatbag!\n");
         iWin = true;
         SaveInFile(iWin);
+        while ((getchar()) != '\n');
         break;
+        
     }
     else
     {
