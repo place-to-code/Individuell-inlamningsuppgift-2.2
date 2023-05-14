@@ -7,9 +7,15 @@
 #include <time.h>  
 #include <math.h> 
 
-//funtion for calculation (without input) to make tasting easeir. 
-//because function can return only one value, but I need to return both area and "perimeter"
-//and to to create separate function I use pointers (in this case)
+float CircelFormula (float radiusFloat,  float* circumference)
+{
+    const float pi = 3.1415926535;  
+    float area;
+    area = pi*radiusFloat*radiusFloat;
+    *circumference = 2*pi*radiusFloat;
+    return area;
+}
+
 float RectangleFormula (float firstFloat, float secondFloat, float* perimeter)
 {
 
@@ -246,7 +252,7 @@ float Triangle()
         }    
 
     }
-    //area = 0.5 * a * b * sin(γ)
+    
     float angleInRadians = angleFloat * (pi / 180); //convert degrees in radians
     float area = 0.5*firstFloat*secondFloat*sin(angleInRadians); 
     float perimeter = firstFloat + secondFloat + sqrt(firstFloat * firstFloat + secondFloat * secondFloat - 2 * firstFloat * secondFloat * cos(angleInRadians));
@@ -286,8 +292,9 @@ float Circle ()
     }
     float radiusFloat = atof (radius); //convert char to float
 
-    area = pi*radiusFloat*radiusFloat;
-    circumference = 2*pi*radiusFloat;
+    // area = pi*radiusFloat*radiusFloat;
+    // circumference = 2*pi*radiusFloat;
+    area = CircelFormula (radiusFloat,  &circumference);
     printf ("Area for radius %.2f is %.2f, circumrence is %.2f.\n", radiusFloat, area, circumference);
     printf ("Press any key to continue...\n");
     getch();

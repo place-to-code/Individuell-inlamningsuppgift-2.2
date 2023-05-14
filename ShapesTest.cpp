@@ -52,3 +52,15 @@ TEST(RectangleFormulaTest, CalculateAreaAndPerimeterOfRectangle) {
   EXPECT_FLOAT_EQ(expected_area, area);
   EXPECT_FLOAT_EQ(expected_perimeter, perimeter);
 }
+
+TEST(CircleFormulaTest, CalculateAreaAndCircumferenceOfCircle) {
+  
+  const float pi = 3.1415926535;  
+  float radiusFloat = 5;
+  float expected_area = pi * radiusFloat * radiusFloat;
+  float expected_circumference = 2 * pi * radiusFloat;
+  float circumference;
+  float area = CircelFormula (radiusFloat,  &circumference);
+  EXPECT_FLOAT_EQ(expected_area, area);
+  EXPECT_FLOAT_EQ(expected_circumference, circumference);
+}
