@@ -39,7 +39,7 @@ clean:
 $(OUTPUTDIR):
 	@mkdir "$(OUTPUTDIR)"
 
-check.exe: $(OUTPUTDIR)/ShapesTest.o $(OUTPUTDIR)/calculator.o $(OUTPUTDIR)/game.o $(OUTPUTDIR)/shapes.o  $(OUTPUTDIR)/gameTest.o 
+check.exe: $(OUTPUTDIR)/ShapesTest.o $(OUTPUTDIR)/calculator.o $(OUTPUTDIR)/game.o $(OUTPUTDIR)/shapes.o  $(OUTPUTDIR)/gameTest.o  $(OUTPUTDIR)/calculatorTest.o 
 	g++ -o $@ $^ $(CFLAGS) -I $(GTESTINCLUDE)  $(LIBGTEST)
 
 test: check.exe
