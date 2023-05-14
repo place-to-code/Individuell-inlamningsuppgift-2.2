@@ -7,6 +7,15 @@
 #include <time.h>  
 #include <math.h> 
 
+float TriangleFormula (float firstFloat, float secondFloat, float angleFloat, float* perimeter)
+{
+    const float pi = 3.1415926535;  
+    float angleInRadians = angleFloat * (pi / 180); //convert degrees in radians
+    float area = 0.5*firstFloat*secondFloat*sin(angleInRadians); 
+    *perimeter = firstFloat + secondFloat + sqrt(firstFloat * firstFloat + secondFloat * secondFloat - 2 * firstFloat * secondFloat * cos(angleInRadians));
+    return area;
+}
+
 float CircelFormula (float radiusFloat,  float* circumference)
 {
     const float pi = 3.1415926535;  
@@ -253,9 +262,12 @@ float Triangle()
 
     }
     
-    float angleInRadians = angleFloat * (pi / 180); //convert degrees in radians
-    float area = 0.5*firstFloat*secondFloat*sin(angleInRadians); 
-    float perimeter = firstFloat + secondFloat + sqrt(firstFloat * firstFloat + secondFloat * secondFloat - 2 * firstFloat * secondFloat * cos(angleInRadians));
+    // float angleInRadians = angleFloat * (pi / 180); //convert degrees in radians
+    // float area = 0.5*firstFloat*secondFloat*sin(angleInRadians); 
+    // float perimeter = firstFloat + secondFloat + sqrt(firstFloat * firstFloat + secondFloat * secondFloat - 2 * firstFloat * secondFloat * cos(angleInRadians));
+    float perimeter;
+    float area = TriangleFormula (firstFloat,  secondFloat,  angleFloat, &perimeter);
+    
     printf ("The area of the triangel is %.2f: ", area );
     printf ("\nThe perimeter of the triangel is %.2f: ", perimeter);
     printf ("\nPress any key to continue...\n");

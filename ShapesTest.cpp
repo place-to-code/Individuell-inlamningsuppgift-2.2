@@ -64,3 +64,27 @@ TEST(CircleFormulaTest, CalculateAreaAndCircumferenceOfCircle) {
   EXPECT_FLOAT_EQ(expected_area, area);
   EXPECT_FLOAT_EQ(expected_circumference, circumference);
 }
+
+TEST(TriangleFormulaTest, CalculateAreaAndPerimeterOfTriangle) 
+{
+
+// Enter first side of triangel: 4
+// Enter second side of triangel: 5
+// Enter the angle in degrees: 66
+// The area of the triangel is 9.14: 
+// The perimeter of the triangel is 13.97:
+
+  const float pi = 3.1415926535; 
+  float firstFloat = 4;
+  float secondFloat = 5;
+  float angleFloat = 66;
+  float perimeter;
+
+  float angleInRadians = angleFloat * (pi / 180);
+  float expected_area = firstFloat*secondFloat*sin(angleInRadians)/2;
+  float expected_perimeter = firstFloat + secondFloat + sqrt(firstFloat * firstFloat + secondFloat * secondFloat - 2 * firstFloat * secondFloat * cos(angleInRadians));
+  float area = TriangleFormula(firstFloat, secondFloat, angleFloat, &perimeter);
+ 
+  EXPECT_FLOAT_EQ(expected_area, area);
+  EXPECT_FLOAT_EQ(expected_perimeter, perimeter);
+}
