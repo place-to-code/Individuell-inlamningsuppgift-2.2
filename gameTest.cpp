@@ -12,10 +12,10 @@
 
 //This test checks if random generator gives values evenly.
 //it will be run 100 times och get 100 generated numbers
-//because it generates random depending on current time, 
-//we need a pause (100 ms) to get en even results
+//because it generates random is depending on current time, 
+//we need a pause (100 ms) to get an even result
 //expected value is 100/3 = 33 and normal deviation for that is 10
-//so normally it will be generate each number in the range 23-43 (33 - 10 and 33+10)
+//so normally it will be generate each number in the range 23-43 (33-10 and 33+10)
 //so this test will be passad almost always
 
 
@@ -56,11 +56,9 @@ int random;
         three++;
     }  
  }
- printf ("%d\n", one);
- printf ("%d\n", two);
- printf ("%d\n", three);
-
- 
+//  printf ("%d\n", one); 
+//  printf ("%d\n", two);
+//  printf ("%d\n", three);
 
   EXPECT_TRUE( one >= 23 && one <= 43); 
   EXPECT_TRUE( two >= 22 &&  two <= 43); 

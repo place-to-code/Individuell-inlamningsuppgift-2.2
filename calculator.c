@@ -7,6 +7,36 @@
 #include <time.h>  
 #include <math.h> 
 
+float devidingFormula(float firstFloat,float secondFloat)
+{
+    float sum = firstFloat/secondFloat;
+    return sum;
+}
+
+float multiplyingFormula(float firstFloat,float secondFloat)
+{
+    float sum = firstFloat*secondFloat;
+    return sum;
+}
+
+float addingFormula(float firstFloat,float secondFloat)
+{
+    float sum = firstFloat+secondFloat;
+    return sum;
+}
+
+float extractingFormula(float firstFloat,float secondFloat)
+{
+    float sum = firstFloat-secondFloat;
+    return sum;
+}
+
+int modulusFormula(int firstInt, int secondInt)
+{
+    int sum = firstInt % secondInt;
+    return sum;
+}
+
 void MiniCalculator()  
 {
 printf ("Mini Calculator!\n");    
@@ -66,26 +96,27 @@ printf ("Dividing: / \n");
 printf ("Modulus: \% \n");
 scanf (" %c", &whatToDo[0]);
 
-                                        //!!!safe input fix 
+ 
 
-if (strcmp(&whatToDo,"+")==0)
+if (whatToDo[0] == '+')
 {
-    sum = firstFloat + secondFloat;
+    sum = addingFormula(firstFloat,secondFloat);
     printf ("The answer is %.2f\n", sum); 
 }
 
 if (strcmp(&whatToDo,"-")==0)
 {
-    sum = firstFloat - secondFloat;
+    sum = extractingFormula(firstFloat, secondFloat);
+    printf ("The answer is %.2f\n", sum);
 }
 
-if (strcmp(&whatToDo,"*")==0)
+if (whatToDo[0] == '*')
 {
-    sum = firstFloat * secondFloat;
+    sum = multiplyingFormula(firstFloat,secondFloat);
     printf ("The answer is %.2f\n", sum); 
 }
 
-if (strcmp(&whatToDo,"/")==0)
+if (whatToDo[0] == '/')
 {
 
     if (secondFloat == 0)
@@ -94,18 +125,19 @@ if (strcmp(&whatToDo,"/")==0)
     }
     else
     {
-    sum = firstFloat/secondFloat;
+    float sum = devidingFormula(firstFloat, secondFloat);
     printf ("The answer is %.2f\n", sum);
     }
      
 }
 
-if (strcmp(&whatToDo,"%")==0)
+if (whatToDo[0] == '%')
 {   
     int firstInt = (int) round (firstFloat);
     int secondInt = (int) round (secondFloat);
-    sum = firstInt % secondInt;
-    printf ("The answer is %.2f\n", sum); 
+    int sum = modulusFormula(firstInt, secondInt);
+    printf ("The answer is %d\n", sum); 
+
 }
 
 printf ("Press any key to continue...\n");
